@@ -1,0 +1,20 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  front:
+    image: node:16
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front:/code
+    working_dir: /code
+    command: ["npm", "run", "dev"]
+    network_mode: host
+  back:
+    image: node:16
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./back:/code
+    working_dir: /code
+    command: ["npm", "run", "start:dev"]
+    network_mode: host

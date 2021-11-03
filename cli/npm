@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ "$1" != "front" && "$1" != "back" ]]; then
+    echo "First argument must be front or back"
+    exit 1
+fi
+
+docker-compose run --no-deps --rm ${1} npm ${@:2}
