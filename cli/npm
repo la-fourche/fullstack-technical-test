@@ -5,4 +5,4 @@ if [[ "$1" != "front" && "$1" != "back" ]]; then
     exit 1
 fi
 
-docker-compose run --no-deps --rm ${1} npm ${@:2}
+docker compose run --no-deps --rm ${1} npm ${@:2}

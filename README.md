@@ -22,7 +22,7 @@ Côté back, développer en Typescript est obligatoire (le framework utilisé es
 
 Tu peux utiliser Docker et Docker Compose pour run ce projet.
 
-Dans ce cas, utilise le script ```cli/npm``` pour exécuter NPM dans les conteneurs comme tel :
+Dans ce cas, utilise le script `cli/npm` pour exécuter NPM dans les conteneurs comme tel :
 
 ```bash
 # cli/npm ${PROJECT} ${NPM_COMMAND}
@@ -34,19 +34,19 @@ cli/npm back install
 Puis lance le projet :
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 Le back et le front démarrent respectivement sur les ports 4000 et 3000.
 
-Le network est configuré en mode ```host``` pour simplifier les appels, les urls suivantes fonctionnent en local et dans les conteneurs :
+Le network est configuré en mode `host` pour simplifier les appels, les urls suivantes fonctionnent en local et dans les conteneurs :
 
 - Front : http://localhost:3000
 - Back : http://localhost:4000
 
 #### Option 2 : Node local
 
-Tu sais probablement te débrouiller avec NPM et NodeJS pour lancer le back et le front, dispos respectivement dans les dossiers ```back``` et ```front```.
+Tu sais probablement te débrouiller avec NPM et NodeJS pour lancer le back et le front, dispos respectivement dans les dossiers `back` et `front`.
 
 Les ports sont également 3000 pour le front et 4000 pour le back.
 
@@ -59,11 +59,11 @@ La recherche est constituée d'un input de texte pour la recherche, ainsi que de
 La recherche peut ne pas disposer de pagination, afficher les 20 résultats les plus pertinants sera considéré comme un exercice réussi.
 S'il te reste du temps, ajouter une pagination constitue un plus.
 
-Les produits doivent être présentés sous forme de Cards disposant au minimum des éléments suivants : 
+Les produits doivent être présentés sous forme de Cards disposant au minimum des éléments suivants :
 
 - une image
 - un nom
-- un prix 
+- un prix
 - un bouton "Ajouter au panier" ou "Supprimer du panier"
 
 Les Cards doivent être présentées dans une grille, avec 4 éléments par ligne en Desktop, et 2 éléments par ligne en mobile.
@@ -80,9 +80,9 @@ Pour simplifier l'exercice, le panier ne dispose pas d'une gestion de quantités
 
 L'utilisateur peut ajouter un produit dans le panier grâce au bouton "Ajouter au panier" disponible sur les Cards produit. SI le produit est déjà dans le panier, le bouton "Ajouter au panier" est remplacé par un bouton "Supprimer du panier" qui a pour action de... supprimer le produit du panier !
 
-Le panier doit être synchronisé dans le backend grâce à l'API mise à disposition dans le dossier ```back```. Ce backend n'est pas totalement implémenté, **il faut donc compléter cette implémentation.** Certains types et controlleurs sont déjà en place, tu peux t'en servir, les modifier, fait ce qu'il te plaît.
+Le panier doit être synchronisé dans le backend grâce à l'API mise à disposition dans le dossier `back`. Ce backend n'est pas totalement implémenté, **il faut donc compléter cette implémentation.** Certains types et controlleurs sont déjà en place, tu peux t'en servir, les modifier, fait ce qu'il te plaît.
 
-Dans tous les cas, utilise le tableau déjà disponible dans le ```CartService``` en tant que base de donnée, ne cherche pas a mettre en place une autre base, ça te prendrait trop de temps. Cela a pour impact que les paniers sont tous supprimé à chaque redémarrage du serveur.
+Dans tous les cas, utilise le tableau déjà disponible dans le `CartService` en tant que base de donnée, ne cherche pas a mettre en place une autre base, ça te prendrait trop de temps. Cela a pour impact que les paniers sont tous supprimé à chaque redémarrage du serveur.
 
 Le panier sauvegardé dans le back permettra de conserver le panier au rechargement de la page dans le front.
 
@@ -90,8 +90,8 @@ Le panier doit être affiché dans une page à part : "/cart". Le panier doit ê
 
 - Le prix total
 - La liste des produits, sous forme de liste, avec les informations suivantes pour chaque produit :
-    - Le nom du produit
-    - Le prix
+  - Le nom du produit
+  - Le prix
 
 Le style du panier est libre, une fois de plus, ce n'est pas un critère d'évaluation, à condition qu'il soit lisible.
 
